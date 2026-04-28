@@ -46,34 +46,69 @@
 
             <div class="grid">
                 <article class="work-item">
-                    <h3>AI-Powered Anatomy Chatbot</h3>
+                    <h3>Anatomy Course Materials Chat Assistant</h3>
+                    <p class="muted">
+                        A web app that helps students ask questions against anatomy educational content by retrieving relevant excerpts and generating answers grounded in course materials.
+                    </p>
                     <ul>
-                        <li>Developed a cloud-based chatbot enabling users to search and navigate educational anatomy video content using semantic search and vector embeddings.</li>
-                        <li>Designed backend services using FastAPI and integrated vector databases for efficient information retrieval.</li>
-                        <li>Deployed on AWS using services such as EC2 and S3, supporting real-world usage in academic environments.</li>
-                        <li>Worked with stakeholders to refine functionality and improve usability for end users.</li>
-                        <li>Selected for presentation at a national conference.</li>
+                        <li>Built a React single-page chat experience with login/signup, conversational context, and an admin upload flow for course PDFs.</li>
+                        <li>Implemented a Flask API that performs retrieval-augmented Q&amp;A by embedding queries, searching a vector index, and generating responses from retrieved context.</li>
+                        <li>Designed ingestion paths for both documents and transcript-style video text (with timestamps) to support “where in the video” style questions.</li>
+                        <li>Added basic account/session handling and interaction logging using a managed NoSQL datastore (via the AWS SDK) to support user access and auditing.</li>
+                        <li>Containerized frontend and backend with Docker to enable repeatable local development and deployment.</li>
                     </ul>
+                    <p class="muted"><strong>Tech:</strong> React, Create React App, React Router, Axios, Flask, Python, Docker, Nginx (via compose), AWS SDK for Python (boto3), DynamoDB, Pinecone, OpenAI API, LangChain, bcrypt, PyMuPDF (fitz)</p>
+                    <ul>
+                        <li>Dockerfiles provided for both services; frontend builds a static bundle and backend exposes an HTTP API on port 5000.</li>
+                        <li>CI/CD: Not specified in repo.</li>
+                    </ul>
+                    <p class="muted">
+                        <strong>Note:</strong> Omitted any restricted educational content, institution-specific identifiers, and environment/infrastructure specifics (domains, credentials, and deployment endpoints) not required for a high-level portfolio summary.
+                    </p>
                 </article>
 
                 <article class="work-item">
-                    <h3>Prediction Application</h3>
+                    <h3>Anatomy Grade Predictor (Web App)</h3>
+                    <p class="muted">
+                        A web app that trains a regression model from CSV assessment data to forecast learner performance and generate explainability visuals for anatomy educational content programs.
+                    </p>
                     <ul>
-                        <li>Built an end-to-end prediction workflow that turns user input into validated requests, model-ready features, and clear results.</li>
-                        <li>Designed API-first backend services with strong input validation and error handling for reliable integrations.</li>
-                        <li>Containerized services for consistent local and cloud execution, supporting repeatable deployments.</li>
-                        <li>Iterated with user feedback to improve usability, clarity of outputs, and operational reliability.</li>
+                        <li>Built a React + Flask workflow for uploading training data, training a model on demand, and returning evaluation metrics to support rapid iteration on grading/prediction approaches.</li>
+                        <li>Implemented single and batch prediction paths, including a “download results as CSV” flow to streamline instructor/course-staff review of predicted outcomes.</li>
+                        <li>Added an explainability artifact (feature-importance visualization) to help stakeholders understand which inputs most influence predicted grades.</li>
+                        <li>Containerized frontend and backend services for reproducible local environments and simplified onboarding via a single multi-service run configuration.</li>
+                        <li>Designed the API around clear endpoints (train, predict, batch predict, download, feature importance) to keep UI logic thin and enable future integrations.</li>
                     </ul>
+                    <p class="muted"><strong>Tech:</strong> Python, Flask, flask-cors, pandas, numpy, matplotlib, scikit-learn, React, axios, Node.js, Docker, Docker Compose</p>
+                    <ul>
+                        <li>Docker-based local deployment with docker-compose.yml orchestrating separate frontend and backend containers.</li>
+                        <li>Cloud deployment and CI/CD: Not specified in repo (repo includes AWS S3 client utilities/config hooks, but no verified production pipeline or hosted environment configuration).</li>
+                    </ul>
+                    <p class="muted">
+                        <strong>Note:</strong> Omitted any restricted dataset specifics, internal identifiers, access details, and source links to keep the description confidentiality-safe and portfolio-appropriate.
+                    </p>
                 </article>
 
                 <article class="work-item">
-                    <h3>Assistive Technology Matching System</h3>
+                    <h3>Assistive Technology Funding Program Chat Assistant</h3>
+                    <p class="muted">
+                        A RAG-powered web chat experience that helps people quickly find relevant assistive technology funding programs using natural-language questions and lightweight eligibility context.
+                    </p>
                     <ul>
-                        <li>Built an AI-driven system to match users with assistive technology resources using NLP and cloud-based APIs.</li>
-                        <li>Translated user needs into structured backend logic and improved system responses through iterative feedback.</li>
-                        <li>Collaborated with stakeholders to enhance real-world applicability and usability.</li>
-                        <li>Contributing to ongoing research publication.</li>
+                        <li>Built an Angular single-page app that guides users through a conversational workflow and renders structured “program card” results alongside plain‑English explanations.</li>
+                        <li>Implemented a Django REST API that orchestrates RAG chat turns, session/thread handling, and conversation history persistence for a consistent multi‑turn experience.</li>
+                        <li>Integrated Azure Cognitive Search + Azure OpenAI to retrieve and synthesize answers from indexed program/FAQ content, with optional query expansion and relevance re-ranking.</li>
+                        <li>Added voice accessibility via server-side speech-to-text and client-side read‑aloud to support hands-free and low‑vision usage patterns.</li>
+                        <li>Implemented user feedback capture and chat export capabilities to support iterative quality improvements and traceable outcomes.</li>
                     </ul>
+                    <p class="muted"><strong>Tech:</strong> Angular, TypeScript, Angular Material, Tailwind CSS, Django, Django REST Framework, PostgreSQL, MongoDB (PyMongo/Motor), Azure OpenAI, Azure Cognitive Search, Azure Speech-to-Text, Azure Blob Storage, OAuth 2.0 (Django OAuth Toolkit), Gunicorn, GitHub Actions</p>
+                    <ul>
+                        <li>Frontend CI/CD via GitHub Actions deploying to Azure Static Web Apps (branch-based builds on master/PRs).</li>
+                        <li>Backend deployment environment: Not specified in repo (Gunicorn config present; Azure hosting indicators exist but exact setup details are intentionally omitted).</li>
+                    </ul>
+                    <p class="muted">
+                        <strong>Note:</strong> Deliberately omitted any source links, endpoint URLs, API keys/tokens, and index/storage identifiers, and kept dataset/content details high-level for confidentiality and safety.
+                    </p>
                 </article>
 
                 <article class="work-item">
@@ -89,13 +124,25 @@
                 </article>
 
                 <article class="work-item">
-                    <h3>Assessment Feedback Application</h3>
+                    <h3>Automated Assessment Feedback &amp; Email Delivery Portal</h3>
+                    <p class="muted">
+                        A secure, instructor-facing web app that transforms uploaded assessment spreadsheets into per-student performance summaries and sends individualized feedback emails at scale.
+                    </p>
                     <ul>
-                        <li>Led development of a cloud-based feedback system deployed across multiple academic courses.</li>
-                        <li>Collaborated with stakeholders to gather requirements and improve system usability.</li>
-                        <li>Recognized through a university invention disclosure for innovation and real-world impact.</li>
-                        <li>Deployed using AWS infrastructure with CI/CD pipelines and monitoring for reliability.</li>
+                        <li>Built a React-based instructor portal to upload assessment metadata and student results, then review generated per-student feedback in a clean, scannable UI.</li>
+                        <li>Implemented a Flask API to parse Excel inputs, map missed questions to categories/modules, and compute structured summaries (score, focus areas, “needs most work”) for each student.</li>
+                        <li>Integrated OAuth2-based sign-in and an email-sending API so authenticated instructors can deliver feedback directly from the platform without manual copy/paste.</li>
+                        <li>Added optional AI-generated narrative summaries to convert structured performance data into warm, instructor-style feedback messaging.</li>
+                        <li>Containerized the system with an Nginx reverse proxy and a production WSGI server, including health checks and secure cookie handling for deployed environments.</li>
                     </ul>
+                    <p class="muted"><strong>Tech:</strong> React, Create React App, Axios, Flask, Gunicorn, pandas, openpyxl, python-dotenv, requests, requests-oauthlib (OAuth2), Nginx, Docker, Docker Compose, Let’s Encrypt, OpenAI API (LLM)</p>
+                    <ul>
+                        <li>Docker Compose deployment with Nginx serving the static UI and proxying API/auth routes to the Flask service.</li>
+                        <li>TLS termination via Let’s Encrypt certificates mounted at runtime; container health checks for basic uptime monitoring.</li>
+                    </ul>
+                    <p class="muted">
+                        <strong>Note:</strong> Specific domains/URLs, identity-tenant configuration, environment variable values, and any real assessment/student datasets were intentionally omitted for privacy and security.
+                    </p>
                 </article>
             </div>
         </section>
