@@ -4,364 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariano De Leon | AI Software Developer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fafafa;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        /* Header */
-        header {
-            text-align: center;
-            padding: 60px 0 40px;
-            background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
-            color: white;
-            margin-bottom: 40px;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        /* Sections */
-        section {
-            background: white;
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        
-        section h2 {
-            font-size: 1.4rem;
-            color: #1a365d;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        
-        /* About */
-        .about p {
-            font-size: 1.05rem;
-            color: #4a5568;
-        }
-        
-        /* Credentials */
-        .credentials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-top: 20px;
-        }
-        
-        .credential-item {
-            background: #f7fafc;
-            padding: 16px;
-            border-radius: 6px;
-            border-left: 4px solid #2d5a87;
-        }
-        
-        .credential-item strong {
-            display: block;
-            color: #1a365d;
-            margin-bottom: 4px;
-        }
-        
-        .credential-item span {
-            font-size: 0.9rem;
-            color: #666;
-        }
-        
-        /* Projects */
-        .project {
-            padding: 24px 0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .project:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        
-        .project:first-of-type {
-            padding-top: 0;
-        }
-        
-        .project h3 {
-            font-size: 1.2rem;
-            color: #1a365d;
-            margin-bottom: 8px;
-        }
-        
-        .project-status {
-            display: inline-block;
-            font-size: 0.75rem;
-            padding: 3px 10px;
-            border-radius: 20px;
-            margin-left: 8px;
-            font-weight: 600;
-        }
-        
-        .status-production {
-            background: #c6f6d5;
-            color: #22543d;
-        }
-        
-        .status-development {
-            background: #fef3c7;
-            color: #92400e;
-        }
-        
-        .project p {
-            color: #4a5568;
-            margin-bottom: 12px;
-        }
-        
-        .project-tech {
-            font-size: 0.85rem;
-            color: #718096;
-            margin-bottom: 12px;
-        }
-        
-        .project-impact {
-            font-size: 0.9rem;
-            color: #2d5a87;
-            font-weight: 500;
-        }
-        
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-        }
-        
-        .skill-category h4 {
-            font-size: 0.9rem;
-            color: #1a365d;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .skill-category ul {
-            list-style: none;
-        }
-        
-        .skill-category li {
-            font-size: 0.95rem;
-            color: #4a5568;
-            padding: 4px 0;
-        }
-        
-        /* Contact */
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
-        }
-        
-        .contact-links a {
-            display: inline-flex;
-            align-items: center;
-            padding: 12px 24px;
-            background: #1a365d;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-        
-        .contact-links a:hover {
-            background: #2d5a87;
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #718096;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            
-            header p {
-                font-size: 1rem;
-            }
-            
-            section {
-                padding: 20px;
-            }
-            
-            .contact-links {
-                flex-direction: column;
-            }
-            
-            .contact-links a {
-                justify-content: center;
-            }
-        }
-    </style>
+    <meta name="description" content="AI Software Developer with a Master’s in Health Informatics. I build and deploy cloud-based applications that integrate AI, APIs, and backend systems for real-world use." />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="hero">
         <div class="container">
-            <h1>Mariano De Leon</h1>
-            <p>AI Software Developer | Healthcare AI | MS Health Informatics</p>
+            <div class="hero-top">
+                <h1>Mariano De Leon</h1>
+                <p class="headline">AI Software Developer | Cloud &amp; Solutions Engineering</p>
+            </div>
+
+            <p class="intro">
+                I build and deploy cloud-based applications that integrate AI, APIs, and user-facing systems to solve real-world problems.
+                I specialize in translating user needs into scalable technical solutions and supporting deployments in production environments.
+            </p>
+
+            <div class="hero-actions" aria-label="Primary links">
+                <a class="btn" href="#work">Selected Work</a>
+                <a class="btn btn-secondary" href="#contact">Contact</a>
+            </div>
         </div>
     </header>
     
-    <div class="container">
-        <section class="about">
-            <h2>About</h2>
-            <p>I build AI applications that solve real problems in healthcare and education. As an AI Software Developer at the University of Pittsburgh's PittNAIL Lab, I lead development of AI-powered tools currently in production. My background combines healthcare domain expertise with hands-on LLM/RAG engineering.</p>
-            
-            <div class="credentials">
-                <div class="credential-item">
-                    <strong>Invention Disclosure</strong>
-                    <span>University of Pittsburgh #7005</span>
+    <main id="content" class="container">
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>
+                AI Software Developer with a Master’s in Health Informatics, focused on building and deploying applications in healthcare and education.
+                My work has been recognized through a university invention disclosure and selected for national conference presentation.
+            </p>
+            <p class="muted">
+                I combine backend engineering, cloud infrastructure, and user-focused problem solving to deliver systems that are technically robust and practical for real-world use.
+            </p>
+        </section>
+
+        <section id="work" class="card">
+            <h2>Selected Work</h2>
+
+            <div class="grid">
+                <article class="work-item">
+                    <h3>AI-Powered Anatomy Chatbot</h3>
+                    <ul>
+                        <li>Developed a cloud-based chatbot enabling users to search and navigate educational anatomy video content using semantic search and vector embeddings.</li>
+                        <li>Designed backend services using FastAPI and integrated vector databases for efficient information retrieval.</li>
+                        <li>Deployed on AWS using services such as EC2 and S3, supporting real-world usage in academic environments.</li>
+                        <li>Worked with stakeholders to refine functionality and improve usability for end users.</li>
+                        <li>Selected for presentation at a national conference.</li>
+                    </ul>
+                </article>
+
+                <article class="work-item">
+                    <h3>Assistive Technology Matching System</h3>
+                    <ul>
+                        <li>Built an AI-driven system to match users with assistive technology resources using NLP and cloud-based APIs.</li>
+                        <li>Translated user needs into structured backend logic and improved system responses through iterative feedback.</li>
+                        <li>Collaborated with stakeholders to enhance real-world applicability and usability.</li>
+                        <li>Contributing to ongoing research publication.</li>
+                    </ul>
+                </article>
+
+                <article class="work-item">
+                    <h3>Assessment Feedback Application</h3>
+                    <ul>
+                        <li>Led development of a cloud-based feedback system deployed across multiple academic courses.</li>
+                        <li>Collaborated with stakeholders to gather requirements and improve system usability.</li>
+                        <li>Recognized through a university invention disclosure for innovation and real-world impact.</li>
+                        <li>Deployed using AWS infrastructure with CI/CD pipelines and monitoring for reliability.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="card">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>Cloud</h3>
+                    <p>AWS EC2, S3, Lambda, Azure</p>
                 </div>
-                <div class="credential-item">
-                    <strong>APTA CSM 2026</strong>
-                    <span>National Conference Presenter</span>
+                <div class="skill">
+                    <h3>Backend</h3>
+                    <p>Python, FastAPI, REST APIs</p>
                 </div>
-                <div class="credential-item">
-                    <strong>IMEA 2026</strong>
-                    <span>Research Paper Co-Author</span>
+                <div class="skill">
+                    <h3>AI/ML</h3>
+                    <p>OpenAI, RAG, Vector Databases, Pinecone, ChromaDB</p>
+                </div>
+                <div class="skill">
+                    <h3>Frontend</h3>
+                    <p>React, HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill">
+                    <h3>DevOps</h3>
+                    <p>Docker, Git, CI/CD</p>
+                </div>
+                <div class="skill">
+                    <h3>Core Strengths</h3>
+                    <p>System Integration, Troubleshooting, Stakeholder Collaboration, Requirements Gathering</p>
                 </div>
             </div>
         </section>
-        
-        <section>
-            <h2>Projects</h2>
-            
-            <div class="project">
-                <h3>Assessment Feedback App <span class="project-status status-production">In Production</span></h3>
-                <p>AI-powered feedback application for educational assessment, deployed across multiple university courses. Uses natural language processing to provide automated, personalized feedback to students.</p>
-                <div class="project-tech"><strong>Tech:</strong> Python, LangChain, OpenAI API, React, AWS</div>
-                <div class="project-impact">📄 Granted University Invention Disclosure (#7005) · Being evaluated for commercial licensing by NuRelm Inc.</div>
-            </div>
-            
-            <div class="project">
-                <h3>Anatomy Chatbot <span class="project-status status-production">In Production</span></h3>
-                <p>Semantic video timestamp search system for medical education. Enables students to find specific moments in cadaver lab videos using natural language queries and vector embeddings.</p>
-                <div class="project-tech"><strong>Tech:</strong> Python, LangChain, Vector Databases, OpenAI API, FastAPI</div>
-                <div class="project-impact">🎤 Presenting at APTA Combined Sections Meeting 2026 (February 14)</div>
-            </div>
-            
-            <div class="project">
-                <h3>PATF Assistive Technology Chatbot <span class="project-status status-production">In Production</span></h3>
-                <p>AI/NLP matching system that helps connect individuals with appropriate assistive technology solutions. Built the AI component using RAG architecture for accurate, context-aware recommendations.</p>
-                <div class="project-tech"><strong>Tech:</strong> Python, Azure OpenAI, RAG, ChromaDB</div>
-                <div class="project-impact">📝 Co-authoring research paper for IMEA 2026 submission</div>
-            </div>
-            
-            <div class="project">
-                <h3>SmartBack Application <span class="project-status status-development">In Development</span></h3>
-                <p>AI-powered healthcare application with RAG architecture for clinical decision support.</p>
-                <div class="project-tech"><strong>Tech:</strong> Python, React, LangChain, AWS</div>
-            </div>
+
+        <section id="how" class="card">
+            <h2>How I Work</h2>
+            <p>I focus on bridging technical systems and user needs by:</p>
+            <ul>
+                <li>Designing and deploying scalable cloud-based solutions</li>
+                <li>Integrating APIs and backend systems for real-world applications</li>
+                <li>Collaborating with stakeholders to translate requirements into technical implementations</li>
+                <li>Troubleshooting and supporting systems in production environments</li>
+            </ul>
         </section>
-        
-        <section>
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>AI / ML</h4>
-                    <ul>
-                        <li>LangChain</li>
-                        <li>OpenAI API</li>
-                        <li>RAG Architecture</li>
-                        <li>Vector Databases</li>
-                        <li>Prompt Engineering</li>
-                        <li>NLP</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Languages & Frameworks</h4>
-                    <ul>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>FastAPI</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Cloud & DevOps</h4>
-                    <ul>
-                        <li>AWS (EC2, Lambda, S3)</li>
-                        <li>Azure OpenAI</li>
-                        <li>Docker</li>
-                        <li>Git</li>
-                        <li>CI/CD</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Healthcare</h4>
-                    <ul>
-                        <li>Health Informatics</li>
-                        <li>EHR Systems</li>
-                        <li>Clinical Data</li>
-                        <li>ICD-10 / CPT</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <h2>Education</h2>
-            <div class="project">
-                <h3>Master of Science, Health Informatics</h3>
-                <p>University of Pittsburgh · 2024</p>
-            </div>
-            <div class="project">
-                <h3>Bachelor of Science, Health Sciences</h3>
-                <p>Drexel University · 2017</p>
-            </div>
-            <div class="project">
-                <h3>Associate of Science, Computer Science / Web Development</h3>
-                <p>Bismarck State College · 2021</p>
-            </div>
-        </section>
-        
-        <section style="text-align: center;">
+
+        <section id="contact" class="card center">
             <h2>Contact</h2>
-            <div class="contact-links">
-                <a href="mailto:maleonpitt@gmail.com">📧 Email</a>
-                <a href="https://linkedin.com/in/mariano-de-leon" target="_blank">💼 LinkedIn</a>
-                <a href="https://github.com/maleonpitt" target="_blank">💻 GitHub</a>
+            <div class="contact">
+                <a class="btn" href="mailto:maleonpitt@gmail.com">Email</a>
+                <a class="btn btn-secondary" href="https://linkedin.com/in/mariano-de-leon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="btn btn-secondary" href="https://github.com/maleonpitt" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+
+            <div class="contact-text">
+                <div><strong>Email:</strong> <a href="mailto:maleonpitt@gmail.com">maleonpitt@gmail.com</a></div>
+                <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mariano-de-leon" target="_blank" rel="noopener noreferrer">linkedin.com/in/mariano-de-leon</a></div>
+                <div><strong>GitHub:</strong> <a href="https://github.com/maleonpitt" target="_blank" rel="noopener noreferrer">github.com/maleonpitt</a></div>
             </div>
         </section>
-    </div>
+    </main>
     
     <footer>
         <p>© 2026 Mariano De Leon</p>
