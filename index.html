@@ -77,12 +77,14 @@
                 </article>
 
                 <article class="work-item">
-                    <h3>Indexer Application</h3>
+                    <h3>Anatomy Content Indexing &amp; Search Pipeline (Serverless)</h3>
                     <ul>
-                        <li>Developed an indexing pipeline to transform unstructured content into searchable data optimized for downstream applications.</li>
-                        <li>Implemented resilient ingestion and processing steps designed for re-runs, partial failures, and incremental updates.</li>
-                        <li>Integrated storage and retrieval components to support fast lookup and reliable updates over time.</li>
-                        <li>Focused on operational maintainability with clear interfaces and deployment-ready packaging.</li>
+                        <li>Built an end-to-end ingestion workflow where users upload documents via pre-signed URLs, avoiding direct backend file handling while keeping storage access tightly controlled.</li>
+                        <li>Orchestrated a multi-step processing pipeline (validation → type detection → parsing/chunking → embedding → indexing → metadata writeback) using managed background workflows to improve reliability and debuggability.</li>
+                        <li>Implemented an authenticated REST API for upload initiation, job status, and lifecycle actions, designed for browser clients with proper CORS behavior and consistent responses.</li>
+                        <li>Added job tracking in a managed NoSQL store so users can view processing state and results without coupling to transient compute.</li>
+                        <li>Designed security-first operations with centralized encryption keys and secrets management for third-party API credentials to support production readiness.</li>
+                        <li>Deployed on AWS with infrastructure defined in Terraform, including encryption, logging, and security monitoring as first-class components.</li>
                     </ul>
                 </article>
 
