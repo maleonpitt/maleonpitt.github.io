@@ -193,6 +193,22 @@ li {
   letter-spacing: -0.01em;
 }
 
+.work-media {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin: 0 0 12px;
+}
+
+.work-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--subtle);
+  background: rgba(2, 6, 23, 0.35);
+}
+
 .skills {
   display: grid;
   gap: 12px;
