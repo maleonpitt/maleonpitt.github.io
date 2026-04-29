@@ -183,30 +183,195 @@ li {
   grid-column: span 12;
   border: 1px solid var(--subtle);
   border-radius: 14px;
-  padding: 16px;
-  background: rgba(15, 23, 42, 0.35);
+  padding: 18px 18px 20px;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.55), rgba(11, 19, 38, 0.45));
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .work-item h3 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-size: 1.08rem;
   letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.work-section .work-hint {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .work-media {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  margin: 0 0 12px;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  margin: 0 0 14px;
+  order: 0;
 }
 
-.work-media img {
+.work-thumb {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--subtle);
+  border-radius: 12px;
+  background: rgba(2, 6, 23, 0.45);
+  cursor: zoom-in;
+  overflow: hidden;
+  line-height: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.work-thumb:hover {
+  border-color: rgba(96, 165, 250, 0.45);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.32);
+  transform: translateY(-1px);
+}
+
+.work-thumb:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus);
+}
+
+.work-thumb:focus:not(:focus-visible) {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.work-thumb img {
   width: 100%;
   height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  object-position: top center;
   display: block;
-  border-radius: 12px;
+  background: rgba(2, 6, 23, 0.25);
+}
+
+@media (min-width: 640px) {
+  .work-media {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .work-media {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Lightbox (enlarged screenshot) */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  height: 100dvh;
+  max-height: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.image-lightbox::backdrop {
+  background: rgba(2, 6, 23, 0.92);
+  backdrop-filter: blur(6px);
+}
+
+.lightbox-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-out;
+}
+
+.image-lightbox-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(96vw, 1400px);
+  max-height: min(90vh, 900px);
+  margin: 0;
+  padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right))
+    max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  pointer-events: none;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: max(4px, env(safe-area-inset-top));
+  right: max(4px, env(safe-area-inset-right));
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   border: 1px solid var(--subtle);
-  background: rgba(2, 6, 23, 0.35);
+  background: rgba(15, 23, 42, 0.92);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(96, 165, 250, 0.45);
+}
+
+.lightbox-close:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus);
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: min(85vh, 860px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid rgba(226, 232, 240, 0.18);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-thumb {
+    transition: none;
+  }
+
+  .work-thumb:hover {
+    transform: none;
+  }
+
+  .image-lightbox::backdrop {
+    backdrop-filter: none;
+  }
 }
 
 .skills {
