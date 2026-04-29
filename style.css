@@ -264,8 +264,20 @@ li {
   }
 }
 
-/* Lightbox (enlarged screenshot) */
+/* Lightbox (enlarged screenshot)
+   Only style when open — a bare `display:flex` on `dialog` overrides the UA
+   `display:none` for closed dialogs, which leaves the × visible and blocks clicks. */
 .image-lightbox {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  max-width: none;
+  max-height: none;
+  box-sizing: border-box;
+}
+
+.image-lightbox[open] {
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -273,16 +285,9 @@ li {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  max-width: none;
   height: 100vh;
   height: 100dvh;
-  max-height: none;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: transparent;
   overflow: hidden;
-  box-sizing: border-box;
 }
 
 .image-lightbox::backdrop {
