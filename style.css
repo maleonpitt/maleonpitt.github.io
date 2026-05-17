@@ -198,6 +198,15 @@ li {
   color: var(--text);
 }
 
+.work-subhead {
+  margin: 14px 0 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+
 .work-section .work-hint {
   margin: 0 0 16px;
   font-size: 0.9rem;

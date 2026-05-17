@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariano De Leon | AI Software Developer</title>
-    <meta name="description" content="AI Software Developer with a Master’s in Health Informatics. I build and deploy cloud-based applications that solve real-world problems." />
+    <title>Mariano De Leon | Cloud &amp; Solutions Engineer</title>
+    <meta name="description" content="Cloud-focused engineer with a Master’s in Health Informatics. I design and deploy AWS-backed applications that solve real-world problems in healthcare and education." />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,12 +14,11 @@
         <div class="container">
             <div class="hero-top">
                 <h1>Mariano De Leon</h1>
-                <p class="headline">AI Software Developer | Cloud &amp; Solutions Engineering</p>
+                <p class="headline">Cloud &amp; Solutions Engineer | AI-Enabled Applications</p>
             </div>
 
             <p class="intro">
-                I build and deploy cloud-based applications that solve real-world problems.
-                I specialize in translating user needs into scalable technical solutions and supporting deployments in production environments.
+                I design, deploy, and operate cloud infrastructure on AWS—pairing managed services and containers with application teams so products stay secure, observable, and cost-aware in production.
             </p>
 
             <div class="hero-actions" aria-label="Primary links">
@@ -33,101 +32,20 @@
         <section id="about" class="card">
             <h2>About Me</h2>
             <p>
-                AI Software Developer with a Master’s in Health Informatics, focused on building and deploying applications in healthcare and education.
+                Cloud-focused engineer with a Master’s in Health Informatics, building and operating AWS-backed systems in healthcare and education.
                 My work has been recognized through a university invention disclosure.
                 I presented an anatomy course-materials chat assistant and an AI-assisted physical therapy web platform at an American Physical Therapy Association (APTA) conference.
             </p>
             <p class="muted">
-                I combine backend engineering, cloud infrastructure, and user-focused problem solving to deliver systems that are technically robust and practical for real-world use.
+                I translate requirements into architecture decisions—choosing the right AWS services, defining data flows, and shipping infrastructure that teams can run confidently in production.
             </p>
         </section>
 
         <section id="work" class="card work-section">
             <h2>Selected Work</h2>
-            <p class="work-hint muted">Tap a screenshot to view it full size. Press Esc or click outside to close.</p>
+            <p class="work-hint muted">Tap a screenshot to view it full size. Press Esc or click outside to close. Projects are ordered with the deepest AWS/cloud infrastructure work first.</p>
 
             <div class="grid">
-                <article class="work-item">
-                    <h3>AI-Assisted Physical Therapy Web Platform</h3>
-                    <div class="work-media" role="group" aria-label="Physical therapy web platform screenshots">
-                        <button type="button" class="work-thumb" aria-label="Enlarge physical therapy platform screenshot 1">
-                            <img src="./photos/physical-therapy-platform-1.png" alt="" width="1202" height="666" decoding="async" />
-                        </button>
-                        <button type="button" class="work-thumb" aria-label="Enlarge physical therapy platform screenshot 2">
-                            <img src="./photos/physical-therapy-platform-2.png" alt="" width="1210" height="766" decoding="async" />
-                        </button>
-                        <button type="button" class="work-thumb" aria-label="Enlarge physical therapy platform screenshot 3">
-                            <img src="./photos/physical-therapy-platform-3.png" alt="" width="1186" height="674" decoding="async" />
-                        </button>
-                    </div>
-                    <p class="muted">
-                        Connects therapists and participants through structured check-ins, AI-assisted exercise planning, and embedded instructional video so low-back rehab programs stay personalized and trackable.
-                    </p>
-                    <ul>
-                        <li>Delivered parallel therapist/participant experiences (dashboard vs portal) spanning enrollment, plans, daily questionnaires, alerts/check-ins, plan edits, embedded instructional video, and AI-assisted exercise discovery.</li>
-                        <li>Proxied backend calls through Next.js route handlers (<code>/api/backend/*</code>) for same-origin browser requests; shipped Dockerized standalone builds with Compose and documented AWS EC2/ALB/VPC-style deployments (manual/script-driven; no CI in repo).</li>
-                    </ul>
-                    <p class="muted"><strong>Tech:</strong> Next.js, React, TypeScript, Tailwind CSS, Bootstrap, Docker, Docker Compose, Node.js, OpenAI API, YouTube Data API, Axios, ESLint</p>
-                </article>
-
-                <article class="work-item">
-                    <h3>Anatomy Course Materials Chat Assistant</h3>
-                    <div class="work-media" role="group" aria-label="Anatomy course materials chat assistant screenshots">
-                        <button type="button" class="work-thumb" aria-label="Enlarge Anatomy chat assistant screenshot 1">
-                            <img src="./photos/anatomy-assistant-1.png" alt="" width="1198" height="940" decoding="async" />
-                        </button>
-                        <button type="button" class="work-thumb" aria-label="Enlarge Anatomy chat assistant screenshot 2">
-                            <img src="./photos/anatomy-assistant-2.png" alt="" width="1186" height="996" decoding="async" />
-                        </button>
-                        <button type="button" class="work-thumb" aria-label="Enlarge Anatomy chat assistant screenshot 3">
-                            <img src="./photos/anatomy-assistant-3.png" alt="" width="1190" height="720" decoding="async" />
-                        </button>
-                    </div>
-                    <p class="muted">
-                        A web app that helps students ask questions against anatomy educational content by retrieving relevant excerpts and generating answers grounded in course materials.
-                    </p>
-                    <ul>
-                        <li>Built a React chat UI with auth, conversational context, and an admin upload flow for course PDFs.</li>
-                        <li>Implemented a Flask RAG API (embed → retrieve → answer) grounded in retrieved excerpts.</li>
-                    </ul>
-                    <p class="muted"><strong>Tech:</strong> React, Flask, Python, Docker, DynamoDB, Pinecone, OpenAI API</p>
-                </article>
-
-                <article class="work-item">
-                    <h3>Anatomy Grade Predictor (Web App)</h3>
-                    <p class="muted">
-                        A web app that trains a regression model from CSV assessment data to forecast learner performance and generate explainability visuals for anatomy educational content programs.
-                    </p>
-                    <ul>
-                        <li>Built a React + Flask pipeline to upload CSVs, train models on demand, and report evaluation metrics.</li>
-                        <li>Implemented single + batch predictions with CSV export to streamline instructor review.</li>
-                    </ul>
-                    <p class="muted"><strong>Tech:</strong> Python, Flask, scikit-learn, pandas, React, Docker Compose</p>
-                </article>
-
-                <article class="work-item">
-                    <h3>Assistive Technology Funding Program Chat Assistant</h3>
-                    <div class="work-media" role="group" aria-label="Assistive technology funding program chat assistant screenshots">
-                        <button type="button" class="work-thumb" aria-label="Enlarge funding program chat screenshot 1">
-                            <img src="./photos/funding-program-chat-1.png" alt="" width="1202" height="532" decoding="async" />
-                        </button>
-                        <button type="button" class="work-thumb" aria-label="Enlarge funding program chat screenshot 2">
-                            <img src="./photos/funding-program-chat-2.png" alt="" width="1176" height="578" decoding="async" />
-                        </button>
-                        <button type="button" class="work-thumb" aria-label="Enlarge funding program chat screenshot 3">
-                            <img src="./photos/funding-program-chat-3.png" alt="" width="1188" height="482" decoding="async" />
-                        </button>
-                    </div>
-                    <p class="muted">
-                        A RAG-powered web chat experience that helps people quickly find relevant assistive technology funding programs using natural-language questions and lightweight eligibility context.
-                    </p>
-                    <ul>
-                        <li>Built an Angular chat UI that returns structured “program cards” alongside plain-English guidance.</li>
-                        <li>Implemented a Django REST API for RAG orchestration, sessions/threads, and conversation persistence.</li>
-                    </ul>
-                    <p class="muted"><strong>Tech:</strong> Angular, Django REST Framework, Azure OpenAI, Azure Cognitive Search, PostgreSQL</p>
-                </article>
-
                 <article class="work-item">
                     <h3>Anatomy Content Indexing &amp; Search Pipeline (Serverless)</h3>
                     <div class="work-media" role="group" aria-label="Indexer pipeline screenshots">
@@ -142,15 +60,146 @@
                         </button>
                     </div>
                     <p class="muted">
-                        A serverless ingestion and indexing pipeline that securely processes uploaded course materials into searchable chunks, enabling retrieval-ready content for downstream Q&amp;A experiences.
+                        Live on AWS (Terraform-managed <em>dev</em> environment): serverless ingestion for anatomy course files—upload → validate → chunk → embed → vector index → metadata—powering downstream RAG chat assistants. Includes a React admin UI for uploads, job history, and index management. Repo: <code>anatomy-indexer-infra</code> (IaC) + <code>anatomy-indexer-app</code> (UI).
                     </p>
+                    <p class="work-subhead">End-to-end flow</p>
                     <ul>
-                        <li>Built a pre-signed upload flow and async processing pipeline (parse → chunk → embed → index → metadata).</li>
-                        <li>Exposed authenticated APIs for upload initiation, job status, and lifecycle actions with consistent CORS behavior.</li>
+                        <li>Instructor signs in (Cognito) → API returns <strong>pre-signed S3 URL</strong> → browser uploads directly to the content bucket.</li>
+                        <li><strong>S3 event</strong> invokes a trigger Lambda → <strong>Step Functions</strong> runs: validate → detect type → parse/chunk → embed (OpenAI) → upsert (Pinecone) → write metadata (DynamoDB) → notify.</li>
+                        <li>Admin UI polls <strong>job status</strong> and supports lifecycle actions (e.g., delete) via REST API behind API Gateway.</li>
                     </ul>
-                    <p class="muted"><strong>Tech:</strong> AWS (S3, Lambda, Step Functions, DynamoDB, KMS), Terraform, Python</p>
+                    <p class="work-subhead">AWS services (by role)</p>
+                    <ul>
+                        <li><strong>Ingestion &amp; orchestration</strong> — S3 (KMS-encrypted content + event notifications on PDF/Office/text uploads), Lambda (VPC-attached pipeline functions), Step Functions (retries/catches per stage), SQS (dead-letter queue for failed runs).</li>
+                        <li><strong>API &amp; auth</strong> — API Gateway (REST, CORS, custom Lambda authorizer), Cognito user pool, DynamoDB (job/document lifecycle table, on-demand).</li>
+                        <li><strong>Secrets &amp; encryption</strong> — Secrets Manager (OpenAI + Pinecone keys), KMS (separate keys for S3 and DynamoDB).</li>
+                        <li><strong>Network</strong> — VPC (private subnets, NAT, flow logs, interface endpoints for S3, DynamoDB, Secrets Manager, KMS).</li>
+                        <li><strong>Admin UI delivery</strong> — S3 (frontend build), CloudFront, Route 53 alias, ACM (lab hostname omitted here).</li>
+                        <li><strong>Observability &amp; security</strong> — CloudWatch Logs, SNS alerts, CloudTrail, GuardDuty, Security Hub, Macie (Terraform modules).</li>
+                        <li><strong>IaC</strong> — modular Terraform (<code>us-east-1</code>); dedicated S3 buckets for content, frontend, CloudTrail logs, and remote state (names omitted).</li>
+                    </ul>
+                    <p class="work-subhead">What it enabled for the product</p>
+                    <ul>
+                        <li>Large course files never block on API Gateway—uploads scale via S3 and async processing.</li>
+                        <li>Repeatable, observable pipeline with per-step failure handling and instructor-facing job status in the UI.</li>
+                        <li>Feeds the same Pinecone/OpenAI retrieval stack used by anatomy Q&amp;A apps after indexing completes.</li>
+                    </ul>
+                    <p class="muted"><strong>Also used:</strong> Python, React (Vite), Pinecone, OpenAI API</p>
+                    <p class="muted"><strong>Deploy note:</strong> Infrastructure applied via Terraform (no GitHub Actions workflow in repo). Lab domains, API URLs, and bucket names are omitted.</p>
                 </article>
-
+                <article class="work-item">
+                    <h3>Anatomy Course Materials Chat Assistant</h3>
+                    <div class="work-media" role="group" aria-label="Anatomy course materials chat assistant screenshots">
+                        <button type="button" class="work-thumb" aria-label="Enlarge Anatomy chat assistant screenshot 1">
+                            <img src="./photos/anatomy-assistant-1.png" alt="" width="1198" height="940" decoding="async" />
+                        </button>
+                        <button type="button" class="work-thumb" aria-label="Enlarge Anatomy chat assistant screenshot 2">
+                            <img src="./photos/anatomy-assistant-2.png" alt="" width="1186" height="996" decoding="async" />
+                        </button>
+                        <button type="button" class="work-thumb" aria-label="Enlarge Anatomy chat assistant screenshot 3">
+                            <img src="./photos/anatomy-assistant-3.png" alt="" width="1190" height="720" decoding="async" />
+                        </button>
+                    </div>
+                    <p class="muted">
+                        Live on AWS: student Q&amp;A over anatomy course PDFs—retrieve relevant excerpts, then generate answers grounded in uploaded materials. Single GitHub repo with <code>anatomy-chatbot-frontend</code> (React) and <code>anatomy-chatbot-backend</code> (Flask RAG API).
+                    </p>
+                    <p class="work-subhead">AWS &amp; infrastructure (production)</p>
+                    <ul>
+                        <li><strong>Amazon EC2 + Docker</strong> — Flask API runs containerized on EC2 behind the load balancer; instance profile / Secrets Manager supply credentials at runtime (not baked into images).</li>
+                        <li><strong>Application Load Balancer (ALB)</strong> — HTTPS termination and health-checked routing to the API tier; dedicated API hostname with ACM in production.</li>
+                        <li><strong>Amazon S3 (multiple buckets)</strong> — <em>frontend</em>: private bucket for the built React SPA (CloudFront origin access control, edge caching, SPA routing to <code>index.html</code>); <em>content</em>: course-material uploads; <em>deploy artifacts</em>: CodeDeploy release bundles (same pattern in more than one region); <em>Terraform state</em>: versioned remote state. Campus IT DNS points the institutional app hostname at CloudFront; ACM provides HTTPS on that alias.</li>
+                        <li><strong>CloudFront <code>/api/*</code> behavior</strong> — same-origin API from the browser: CloudFront forwards <code>/api</code> to the ALB origin over HTTPS so the SPA and API share one public hostname.</li>
+                        <li><strong>Amazon DynamoDB (on-demand)</strong> — three application tables: <em>user accounts</em> (email partition key), <em>chat sessions</em> (session id), and <em>interaction history</em> (email + timestamp sort key for audit and analytics).</li>
+                        <li><strong>AWS Secrets Manager</strong> — JSON secret loaded into the Flask process on startup (OpenAI, Pinecone, and other keys).</li>
+                        <li><strong>AWS CodeDeploy</strong> — pulls backend release ZIPs from the artifacts bucket; rolls out to EC2 via <code>appspec.yml</code> lifecycle hooks (stop → install → start → validate).</li>
+                        <li><strong>Terraform</strong> — IaC for S3, CloudFront, optional custom domain/ACM, and <code>/api/*</code> origin to ALB; remote state in S3 with a DynamoDB lock table for safe concurrent applies.</li>
+                        <li><strong>ACM</strong> — TLS certificates for CloudFront (us-east-1) and/or API hostname as configured in Terraform vars.</li>
+                    </ul>
+                    <p class="work-subhead">CI/CD (GitHub Actions)</p>
+                    <ul>
+                        <li><strong>CI</strong> — compiles backend (<code>py_compile</code>) and builds the React frontend on every push/PR.</li>
+                        <li><strong>Terraform workflow</strong> — <code>fmt</code>, <code>validate</code>, <code>plan</code>; optional <code>apply</code> via dispatch when remote state is configured.</li>
+                        <li><strong>Deploy frontend (S3 + CloudFront)</strong> — <code>npm run build</code>, <code>aws s3 sync</code>, CloudFront invalidation when bucket/distribution variables are set.</li>
+                        <li><strong>Deploy backend (CodeDeploy)</strong> — packages backend, uploads to S3, creates CodeDeploy deployment to the EC2 deployment group.</li>
+                        <li><strong>AWS smoke check</strong> — manual workflow to verify DynamoDB tables and CodeDeploy app reachability.</li>
+                    </ul>
+                    <p class="work-subhead">Supporting services (non-AWS)</p>
+                    <ul>
+                        <li><strong>Pinecone</strong> — vector index for semantic retrieval over embedded course chunks.</li>
+                        <li><strong>OpenAI API</strong> — embeddings and completions for the RAG answer path.</li>
+                    </ul>
+                    <p class="work-subhead">What it enabled for the product</p>
+                    <ul>
+                        <li>Login/signup, session-aware chat, admin PDF upload, and answers grounded in retrieved excerpts—not free-form hallucination.</li>
+                        <li>Public app on an institutional/lab hostname (IT or Route 53 DNS → CloudFront), with edge-cached UI and API reachable on the same hostname when CloudFront routes <code>/api</code> to the load-balanced backend.</li>
+                        <li>Repeatable releases: infra changes via Terraform; app changes via Actions → S3/CodeDeploy without manual SSH deploys.</li>
+                    </ul>
+                    <p class="muted"><strong>Also used:</strong> React, Flask, Python, boto3</p>
+                    <p class="muted"><strong>Confidentiality:</strong> Lab domains, bucket names, and account-specific identifiers are omitted.</p>
+                </article>
+                <article class="work-item">
+                    <h3>Anatomy Grade Predictor (Web App)</h3>
+                    <p class="muted">
+                        Live on AWS: instructors upload assessment CSVs, train a regression model on demand, and export batch predictions with explainability charts. Monorepo with <code>frontend</code> (React) and <code>backend</code> (Flask). Instructors use a lab-hosted HTTPS URL on a private domain (not listed here).
+                    </p>
+                    <p class="work-subhead">AWS &amp; infrastructure (production)</p>
+                    <ul>
+                        <li><strong>Amazon Route 53</strong> — lab-hosted subdomain with an alias record to CloudFront (DNS shows alias → <code>*.cloudfront.net</code>).</li>
+                        <li><strong>Amazon CloudFront</strong> — HTTPS at the edge for the instructor-facing hostname; ACM validated through DNS in the same zone.</li>
+                        <li><strong>Amazon S3</strong> — dedicated bucket for production UI assets (built React app) used as the CloudFront origin; separate bucket pattern in the account for predictor-related uploads or artifacts.</li>
+                        <li><strong>Amazon EC2</strong> — <code>t3.small</code> in <code>us-west-2</code> runs the Flask training/inference API (Docker); browser calls the API while static UI is served from S3 via CloudFront.</li>
+                        <li><strong>IAM instance role</strong> — EC2 role for AWS API access without long-lived keys in the image.</li>
+                        <li><strong>Docker Compose</strong> — local and server-side orchestration of frontend build workflow and backend service during development and deploy.</li>
+                    </ul>
+                    <p class="work-subhead">Application capabilities</p>
+                    <ul>
+                        <li><strong>Train</strong> — upload CSV → scikit-learn regression → evaluation metrics returned to the UI.</li>
+                        <li><strong>Predict</strong> — single-student inference or batch upload with downloadable results CSV.</li>
+                        <li><strong>Explainability</strong> — feature-importance chart endpoint so instructors see which inputs drive predicted grades.</li>
+                    </ul>
+                    <p class="work-subhead">What it enabled for the product</p>
+                    <ul>
+                        <li>Rapid iteration on grading models without a separate ML platform—train and evaluate in the browser.</li>
+                        <li>Split hosting: static UI on S3/CloudFront, ML API on EC2—typical pattern for a small departmental tool without over-building serverless.</li>
+                    </ul>
+                    <p class="muted"><strong>Also used:</strong> Python, Flask, scikit-learn, pandas, React</p>
+                    <p class="muted"><strong>Deploy note:</strong> Route 53, S3, and CloudFront live outside the app repo; bucket names and lab domains are omitted from this portfolio.</p>
+                </article>
+                <article class="work-item">
+                    <h3>AI-Assisted Physical Therapy Web Platform</h3>
+                    <div class="work-media" role="group" aria-label="Physical therapy web platform screenshots">
+                        <button type="button" class="work-thumb" aria-label="Enlarge physical therapy platform screenshot 1">
+                            <img src="./photos/physical-therapy-platform-1.png" alt="" width="1202" height="666" decoding="async" />
+                        </button>
+                        <button type="button" class="work-thumb" aria-label="Enlarge physical therapy platform screenshot 2">
+                            <img src="./photos/physical-therapy-platform-2.png" alt="" width="1210" height="766" decoding="async" />
+                        </button>
+                        <button type="button" class="work-thumb" aria-label="Enlarge physical therapy platform screenshot 3">
+                            <img src="./photos/physical-therapy-platform-3.png" alt="" width="1186" height="674" decoding="async" />
+                        </button>
+                    </div>
+                    <p class="muted">
+                        Web platform for therapist-led low-back rehab: enrollment, personalized plans, daily check-ins, and AI-assisted exercise discovery. Built and deployed on AWS (EC2 + ALB + VPC); stack is maintained locally in separate frontend and backend codebases—the AWS environment is no longer live.
+                    </p>
+                    <p class="work-subhead">AWS architecture (deployed; environment since decommissioned)</p>
+                    <ul>
+                        <li><strong>Amazon EC2</strong> — ran Dockerized frontend and backend services via Compose on the instance for a repeatable runtime.</li>
+                        <li><strong>Application Load Balancer (ALB)</strong> — HTTPS entry point with health-checked routing to the app tier.</li>
+                        <li><strong>Amazon VPC</strong> — public/private subnets and NAT for outbound access; VPC interface endpoints supported operational access (e.g., SSM Session Manager) without public SSH.</li>
+                        <li><strong>Docker / Docker Compose</strong> — orchestrated the Next.js frontend (with API proxy) and separate backend API service, including a persisted volume for backend data.</li>
+                    </ul>
+                    <p class="work-subhead">Application architecture</p>
+                    <ul>
+                        <li><strong>Split repos</strong> — Next.js frontend and Node.js backend developed and versioned independently; Compose wired them together at deploy time.</li>
+                        <li><strong>Next.js API proxy</strong> — route handlers forward <code>/api/backend/*</code> to the backend URL so browsers stay same-origin while business logic stays on the API tier.</li>
+                    </ul>
+                    <p class="work-subhead">What it enabled for the product</p>
+                    <ul>
+                        <li>Dual-role experience: therapist dashboard (roster, alerts, plan editing) and participant portal (ID-based access, daily check-ins, embedded video).</li>
+                        <li>Documented, script-driven AWS deployment (manual/ops-run); no CI pipeline in the frontend repo.</li>
+                    </ul>
+                    <p class="muted"><strong>Also used:</strong> Next.js, React, TypeScript, Node.js, OpenAI API, YouTube Data API</p>
+                </article>
                 <article class="work-item">
                     <h3>Automated Assessment Feedback &amp; Email Delivery Portal</h3>
                     <div class="work-media" role="group" aria-label="Assessment feedback portal screenshots">
@@ -165,13 +214,71 @@
                         </button>
                     </div>
                     <p class="muted">
-                        A secure, instructor-facing web app that transforms uploaded assessment spreadsheets into per-student performance summaries and sends individualized feedback emails at scale.
+                        Instructor-facing portal (production Docker deploy on a lab Linux host): upload assessment spreadsheets, review per-student category breakdowns, generate AI narrative summaries, and send individualized HTML feedback email in bulk. Repo: React frontend + Flask API (<code>anatomy-feedback</code>).
                     </p>
+                    <p class="work-subhead">End-to-end flow</p>
                     <ul>
-                        <li>Built a React instructor portal to upload spreadsheets and review per-student feedback in a scannable UI.</li>
-                        <li>Implemented a Flask pipeline to parse Excel, compute category-level insights, and generate structured summaries.</li>
+                        <li>Instructor signs in with <strong>Microsoft Entra ID</strong> (OAuth2; <code>User.Read</code> + <code>Mail.Send</code> scopes).</li>
+                        <li>Upload <strong>category map</strong> Excel, then <strong>student results</strong> Excel → pandas groups missed items by category/module.</li>
+                        <li><strong>OpenAI</strong> turns structured per-student metrics into instructor-tone email copy; instructor reviews in the UI.</li>
+                        <li><strong>Microsoft Graph API</strong> sends HTML email to each student from the instructor’s mailbox (not a custom SMTP server).</li>
                     </ul>
-                    <p class="muted"><strong>Tech:</strong> React, Flask, pandas, Docker Compose, Nginx, OAuth2, OpenAI API</p>
+                    <p class="work-subhead">Infrastructure &amp; security</p>
+                    <ul>
+                        <li><strong>Docker Compose</strong> — <code>backend</code> (Flask/Gunicorn) and <code>nginx</code> services on one host; React build mounted read-only into Nginx.</li>
+                        <li><strong>Nginx</strong> — HTTPS termination (Let’s Encrypt certs on the host), static UI, reverse proxy to Flask, OAuth callback route to the API.</li>
+                        <li><strong>Persistent volume</strong> — session data on a host-mounted directory under the app container (not serverless storage).</li>
+                        <li><strong>Microsoft Entra ID</strong> — institutional login; Flask session cookies scoped for production (secure, cross-site where needed).</li>
+                    </ul>
+                    <p class="work-subhead">Application stack</p>
+                    <ul>
+                        <li><strong>React</strong> — instructor UI for uploads, per-student feedback cards, and send confirmation.</li>
+                        <li><strong>Flask + pandas + openpyxl</strong> — Excel ingest, category aggregation, batch send orchestration.</li>
+                        <li><strong>OpenAI API</strong> — structured summary generation from JSON feedback payloads.</li>
+                    </ul>
+                    <p class="work-subhead">What it enabled for the product</p>
+                    <ul>
+                        <li>Turned manual post-exam feedback into a guided workflow: upload → analyze → review → one-click bulk email.</li>
+                        <li>Used instructors’ existing Microsoft 365 identity and mail permissions—no separate email infrastructure to operate.</li>
+                        <li>Containerized deploy suitable for a single departmental server without a full AWS serverless pipeline.</li>
+                    </ul>
+                    <p class="muted"><strong>Also used:</strong> React, Flask, pandas, requests-oauthlib, Gunicorn</p>
+                    <p class="muted"><strong>Deploy note:</strong> Lighter cloud footprint than the AWS-heavy anatomy projects—primary integrations are Microsoft 365 and OpenAI. Lab hostnames and credentials are omitted.</p>
+                </article>
+                <article class="work-item">
+                    <h3>Assistive Technology Funding Program Chat Assistant</h3>
+                    <div class="work-media" role="group" aria-label="Assistive technology funding program chat assistant screenshots">
+                        <button type="button" class="work-thumb" aria-label="Enlarge funding program chat screenshot 1">
+                            <img src="./photos/funding-program-chat-1.png" alt="" width="1202" height="532" decoding="async" />
+                        </button>
+                        <button type="button" class="work-thumb" aria-label="Enlarge funding program chat screenshot 2">
+                            <img src="./photos/funding-program-chat-2.png" alt="" width="1176" height="578" decoding="async" />
+                        </button>
+                        <button type="button" class="work-thumb" aria-label="Enlarge funding program chat screenshot 3">
+                            <img src="./photos/funding-program-chat-3.png" alt="" width="1188" height="482" decoding="async" />
+                        </button>
+                    </div>
+                    <p class="muted">
+                        Team-built funding-program chat (believed live on Azure; public URL and full hosting layout are outside my scope). Users ask natural-language questions and receive structured program cards with eligibility-aware guidance. <strong>My work focused on the RAG backend</strong>—retrieval and grounded generation—not the Angular UI or production deploy pipeline.
+                    </p>
+                    <p class="work-subhead">My contribution — RAG on Azure</p>
+                    <ul>
+                        <li><strong>Azure AI Search</strong> — integrated dual indexes (<em>programs</em> + <em>passages</em>): full-text and vector retrieval, plus filters (state, insurance, age) before answers are composed.</li>
+                        <li><strong>Azure OpenAI</strong> — embeddings and chat completions for LLM-driven query expansion, re-ranking, and responses grounded in retrieved program and FAQ passages.</li>
+                        <li><strong>Dual-index search adapter</strong> — end-to-end path: expand query → search both indexes → normalize results → synthesize program-card style output (minimal hard-coded synonym rules).</li>
+                        <li><strong>Django REST hook</strong> — wired RAG into the chat API so the UI receives structured program recommendations backed by search results, not free-form hallucination.</li>
+                    </ul>
+                    <p class="work-subhead">Broader platform (team stack; not my primary ownership)</p>
+                    <ul>
+                        <li>Angular frontend, OAuth2, PostgreSQL, MongoDB (sessions/messages), Azure Blob (attachments), Azure Speech (voice)—present in the repo; deployed via team processes (e.g., Azure Static Web Apps workflow for the UI).</li>
+                    </ul>
+                    <p class="work-subhead">What it enabled for the product</p>
+                    <ul>
+                        <li>Answers tied to indexed funding-program and FAQ content, with eligibility fields surfaced for comparison across programs.</li>
+                        <li>Managed Azure AI Search + OpenAI instead of operating a self-hosted vector database and model host.</li>
+                    </ul>
+                    <p class="muted"><strong>Also used:</strong> Python, Django REST Framework</p>
+                    <p class="muted"><strong>Confidentiality:</strong> Live URLs, Azure resource names, and institutional branding are omitted. Hosting details for the full app were not part of my deliverable.</p>
                 </article>
             </div>
             <p class="muted">
@@ -183,8 +290,12 @@
             <h2>Technical Skills</h2>
             <div class="skills">
                 <div class="skill">
-                    <h3>Cloud</h3>
-                    <p>AWS EC2, S3, Lambda, Azure</p>
+                    <h3>AWS</h3>
+                    <p>EC2, VPC, ALB, S3, CloudFront, Lambda, API Gateway, Step Functions, DynamoDB, Cognito, KMS, Secrets Manager, CodeDeploy, SNS, SQS, CloudWatch, CloudTrail, Terraform</p>
+                </div>
+                <div class="skill">
+                    <h3>Azure</h3>
+                    <p>OpenAI, Cognitive Search, Entra ID OAuth, PostgreSQL, MongoDB</p>
                 </div>
                 <div class="skill">
                     <h3>Backend</h3>
@@ -211,12 +322,12 @@
 
         <section id="how" class="card">
             <h2>How I Work</h2>
-            <p>I focus on bridging technical systems and user needs by:</p>
+            <p>Cloud and solutions engineering practices I apply on every project:</p>
             <ul>
-                <li>Designing and deploying scalable cloud-based solutions</li>
-                <li>Integrating APIs and backend systems for real-world applications</li>
-                <li>Collaborating with stakeholders to translate requirements into technical implementations</li>
-                <li>Troubleshooting and supporting systems in production environments</li>
+                <li>Map business requirements to AWS (or Azure) services—prefer managed, pay-for-use components where they fit.</li>
+                <li>Define data flows, trust boundaries, and encryption (e.g., KMS, pre-signed uploads) before wiring application code.</li>
+                <li>Ship infrastructure as code (Terraform) and container images so environments stay reproducible.</li>
+                <li>Document deployment topology (VPC, load balancers, serverless orchestration) for handoff and production support.</li>
             </ul>
         </section>
 
